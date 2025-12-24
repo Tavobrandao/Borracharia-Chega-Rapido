@@ -11,7 +11,6 @@ const App = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Atualizei o link com o número correto (DDD 92)
   const whatsappLink = "https://wa.me/5592984350148";
 
   const scrollToSection = (id) => {
@@ -20,6 +19,12 @@ const App = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false);
+  };
+
+  // Função auxiliar para evitar que a imagem quebre na pré-visualização se o arquivo não existir
+  const handleImageError = (e) => {
+    e.target.src = "https://placehold.co/600x400?text=Foto+do+Serviço"; // Fallback visual
+    e.target.alt = "Imagem não encontrada (coloque na pasta public)";
   };
 
   return (
@@ -118,7 +123,7 @@ const App = () => {
                <Truck size={120} className="text-red-600" />
                <div className="absolute -bottom-4 bg-gray-800 text-white px-6 py-2 rounded-full font-bold shadow-lg flex items-center gap-2">
                  <Clock size={18} className="text-yellow-400"/>
-                 Chegamos em ~30min
+                 Chegamos em ~20min
                </div>
             </div>
           </div>
@@ -142,6 +147,17 @@ const App = () => {
                 <Wrench className="text-red-600 w-8 h-8 group-hover:text-white transition" />
               </div>
               <h3 className="text-xl font-bold mb-3">Conserto de Pneus</h3>
+
+              {/* IMAGEM ADICIONADA */}
+              <div className="w-full h-48 mb-4 overflow-hidden rounded-lg bg-gray-200">
+                <img 
+                  src="/Conserto de Pneus.png" 
+                  alt="Conserto de Pneus" 
+                  onError={handleImageError}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
+                />
+              </div>
+
               <p className="text-gray-600">
                 Reparo rápido de furos em pneus tubeless (sem câmara) e com câmara. Vulcanização a frio no local.
               </p>
@@ -153,6 +169,17 @@ const App = () => {
                 <Truck className="text-red-600 w-8 h-8 group-hover:text-white transition" />
               </div>
               <h3 className="text-xl font-bold mb-3">Troca de Estepe</h3>
+
+              {/* IMAGEM ADICIONADA */}
+              <div className="w-full h-48 mb-4 overflow-hidden rounded-lg bg-gray-200">
+                <img 
+                  src="/Troca de Estepe.png" 
+                  alt="Troca de Estepe" 
+                  onError={handleImageError}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
+                />
+              </div>
+
               <p className="text-gray-600">
                 Se o pneu rasgou e não tem conserto, fazemos a troca pelo seu estepe com segurança e ferramentas adequadas.
               </p>
@@ -164,6 +191,17 @@ const App = () => {
                 <BatteryCharging className="text-red-600 w-8 h-8 group-hover:text-white transition" />
               </div>
               <h3 className="text-xl font-bold mb-3">Auxílio de Bateria</h3>
+
+              {/* IMAGEM ADICIONADA */}
+              <div className="w-full h-48 mb-4 overflow-hidden rounded-lg bg-gray-200">
+                <img 
+                  src="/Auxílio de Bateria.png" 
+                  alt="Auxílio de Bateria" 
+                  onError={handleImageError}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
+                />
+              </div>
+
               <p className="text-gray-600">
                 O carro não liga? Fazemos a recarga rápida (chupeta) para você não ficar na mão.
               </p>
