@@ -330,7 +330,10 @@ const App = () => {
           </div>
         </div>
         <div className="text-center mt-12 text-red-200 text-sm border-t border-red-600 pt-8 mx-4">
-          &copy; 2025 Borracharia Móvel Chega Rápido. Todos os direitos reservados.
+          <p>&copy; 2025 Borracharia Móvel Chega Rápido. Todos os direitos reservados.</p>
+          <p className="mt-2 opacity-75">
+            Desenvolvido por <a href="https://github.com/Tavobrandao" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-white transition decoration-red-400 underline underline-offset-4">Gustavo Brandão</a>
+          </p>
         </div>
       </footer>
     </div>
