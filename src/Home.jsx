@@ -332,14 +332,19 @@ const Home = () => {
         </div>
         
         {/* RODAPÉ COM O LINK DA POLÍTICA DE PRIVACIDADE */}
-        <div className="text-center mt-12 text-red-200 text-sm border-t border-red-600 pt-8 mx-4">
-          <p>&copy; 2025 Borracharia Móvel Chega Rápido. Todos os direitos reservados.</p>
-          <div className="mt-4 flex flex-col gap-2 items-center">
+        {/* SEÇÃO DE TRANSPARÊNCIA E LEGAL (Crucial para o Google Ads) */}
+        <div className="text-center text-red-100 text-xs border-t border-red-600/50 pt-8 mx-4 space-y-2">
+          <p className="font-bold text-sm">Borracharia Móvel Chega Rápido</p>
+          <p>Serviço prestado de forma autônoma por <strong>Guilherme Brandão Rufino</strong>.</p>
+          <p>Documentação vinculada ao CPF: 703.***.***-** | Manaus - AM</p>
+          <p>Contato: (92) 98435-0148 | borrachariachegarapido@gmail.com</p>
+          
+          <div className="mt-6 flex flex-col gap-2 items-center">
              <Link to="/privacidade" className="font-bold hover:text-white transition underline underline-offset-4">
                Política de Privacidade
              </Link>
-             <p className="opacity-75">
-               Desenvolvido por <a href="https://github.com/Tavobrandao" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-white transition decoration-red-400 underline underline-offset-4">Gustavo Brandão</a>
+             <p className="opacity-60">
+               &copy; 2026 Chega Rápido - Todos os direitos reservados. Desenvolvido por <a href="https://github.com/Tavobrandao" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-white transition underline underline-offset-4">Gustavo Brandão</a>
              </p>
           </div>
         </div>
