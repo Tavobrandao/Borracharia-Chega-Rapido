@@ -12,7 +12,7 @@ const Home = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const whatsappLink = "https://wa.me/5592984350148";
+  const whatsappLink = "https://wa.me/5592991486467";
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -319,7 +319,7 @@ const Home = () => {
           <div className="flex flex-col gap-4 w-full md:w-auto">
             <div className="flex items-center justify-center md:justify-start gap-3">
                <Phone size={20} />
-               <span className="text-xl font-bold">(92) 98435-0148</span>
+               <span className="text-xl font-bold">(92) 99148-6467</span>
             </div>
             <a 
               href={whatsappLink}
@@ -337,7 +337,7 @@ const Home = () => {
           <p className="font-bold text-sm">Borracharia Móvel Chega Rápido</p>
           <p>Serviço prestado de forma autônoma por <strong>Guilherme Brandão Rufino</strong>.</p>
           <p>Documentação vinculada ao CPF: 703.***.***-** | Manaus - AM</p>
-          <p>Contato: (92) 98435-0148 | borrachariachegarapido@gmail.com</p>
+          <p>Contato: (92) 99148-6467 | borrachariachegarapido@gmail.com</p>
           
           <div className="mt-6 flex flex-col gap-2 items-center">
              <Link to="/privacidade" className="font-bold hover:text-white transition underline underline-offset-4">
